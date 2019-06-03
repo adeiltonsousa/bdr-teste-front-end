@@ -223,6 +223,15 @@ section p {
   text-align: center;
   justify-content: center;
   background-color: #454545;
+  overflow: hidden;
+}
+
+.carousel .carousel-container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 #wrapper {
@@ -233,7 +242,7 @@ section p {
   left: 50%;
   top: 50%;
 }
-  
+
 #carousel {
   width: 735px;
   position: vrelative;
@@ -260,15 +269,14 @@ section p {
   float: left;
   position: relative;
 }
-  
+
 #carousel li img {
   width: 201px;
   height: 127px;
   margin-top: 14px;
   border: rgb(104, 104, 104) 7px solid;
-
 }
-  
+
 #carousel li span {
   text-indent: -999px;
   display: block;
@@ -279,14 +287,15 @@ section p {
   z-index: 2;
   top: 14px;
   left: 16px;
-}			
-  
+}
+
 .clearfix {
   float: none;
   clear: both;
 }
 
-#carousel .prev, #carousel .next {
+#carousel .prev,
+#carousel .next {
   background: transparent url(../img/carousel_control.png) no-repeat 0 0;
   text-indent: -999px;
   display: block;
@@ -295,7 +304,7 @@ section p {
   height: 21px;
   margin-left: 10px;
   position: absolute;
-  top: 70px;				
+  top: 70px;
 }
 
 #carousel .prev {
@@ -305,7 +314,7 @@ section p {
 
 #carousel .prev:hover {
   left: -31px;
-}	
+}
 
 #carousel .next {
   background-position: -18px 0;
@@ -314,7 +323,7 @@ section p {
 
 #carousel .next:hover {
   right: -21px;
-}				
+}
 #carousel .pager {
   text-align: center;
   margin: 0 auto;
@@ -333,9 +342,9 @@ section p {
 
 #carousel .pager a.selected {
   background: transparent url(../img/carousel_control.png) no-repeat -12px -32px;
-  text-decoration: underline;				
+  text-decoration: underline;
 }
-  
+
 #source {
   text-align: center;
   width: 100%;
@@ -344,7 +353,8 @@ section p {
   left: 0;
 }
 
-#source, #source a {
+#source,
+#source a {
   font-size: 12px;
   color: #999;
 }
@@ -359,9 +369,26 @@ section p {
 .texto_card {
   font-size: 8pt;
   color: #fff;
-padding: 18px;
-padding-bottom: 0px;
+  padding: 18px;
+  padding-bottom: 0px;
   width: 100%;
+}
+
+@media (max-width: 480px) {
+  #carousel ul li {
+    width: 70vw;
+    margin-left: 260px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .texto_card {
+    font-size: 8pt;
+    color: #fff;
+    padding: 18px;
+    padding-bottom: 0px;
+    width: 80%;
+  }
 }
 
 /* 2.3. ABOUT
@@ -434,7 +461,7 @@ ul {
   list-style: none;
 }
 
-input[type=radio] {
+input[type='radio'] {
   display: none;
 }
 
@@ -445,11 +472,14 @@ input[type=radio] {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
+  padding-top: 40px;
+  background-color: var(--color-cinza-claro-form);
 }
 
 .a-container {
   width: 80vw;
-  margin: 20px auto;
+  margin: 5px auto;
+  background-color: var(--color-cinza-claro);
 }
 
 .a-container label {
@@ -459,47 +489,50 @@ input[type=radio] {
   font-size: 18px;
   font-weight: bold;
   padding: 10px 20px;
-  color: #aaa;
-  background-color: #eee;
-  border-bottom: 1px solid #ddd;
-  
-  -webkit-transition: all .2s ease;
-  -moz-transition: all .2s ease;
-  -ms-transition: all .2s ease;
-  -o-transition: all .2s ease;
-  transition: all .2s ease;
+  color: #fff;
+  background-color: var(--color-cinza-claro);
+  border-top: 1px solid #ddd;
+
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -ms-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
 }
 
 .a-container label:after {
-  content: "";
-  width: 0;
-  height: 0;
-  border-top: 8px solid #aaa;
-  border-right: 6px solid transparent;
-  border-bottom: 8px solid transparent;
-  border-left: 6px solid transparent;
+  content: url(../img/seta_down.png);
+  width: 5px;
+  height: 10px;
+  padding-right: 25px;
+  padding-top: 5px;
   position: absolute;
-  right: 10px;
-  top: 16px;
+  right: 0px;
+  top: 0px;
 }
 
 .a-container input:checked + label,
 .a-container label:hover {
-  background-color: #ddd;
-  color: #222;
+  background-color: #fff;
+  color: var(--color-cinza-escuro);
 }
 
 .a-container input:checked + label:after {
-  border-top: 8px solid transparent;
-  border-right: 6px solid transparent;
-  border-bottom: 8px solid #222;
-  border-left: 6px solid transparent;
-  top: 6px;
+  content: url(../img/seta_up.png);
+  width: 5px;
+  height: 10px;
+  padding-right: 25px;
+  padding-top: 5px;
+  position: absolute;
+  right: 0px;
+  top: 0px;
 }
 
 .a-content {
   padding: 0 20px 20px;
   display: none;
+  background-color: #fff;
+  color: var(--color-cinza-claro);
 }
 
 .a-container input:checked ~ .a-content {
@@ -508,7 +541,6 @@ input[type=radio] {
 
 /* 2.5. FORM
    ============================================= */
-
 
 .contact {
   position: relative;
@@ -551,7 +583,10 @@ input[type=radio] {
   margin-left: 50px;
 }
 
-textarea:focus, input, select:focus, textarea {
+textarea:focus,
+input,
+select:focus,
+textarea {
   box-shadow: 0 0 0 0;
   border: 0 none;
   outline: 0;
@@ -559,24 +594,31 @@ textarea:focus, input, select:focus, textarea {
   padding: 5px;
   width: 20%;
   resize: none;
-} 
+}
 
 ::-webkit-input-placeholder {
   color: #9c9b9b;
-  }
-  
-  :-moz-placeholder { /* Firefox 18- */
-  color: #9c9b9b;
-  }
-  
-  ::-moz-placeholder {  /* Firefox 19+ */
-  color: #9c9b9b;
-  }
-  
-  :-ms-input-placeholder {  
-  color: #9c9b9b;
-  }
+}
 
+:-moz-placeholder {
+  /* Firefox 18- */
+  color: #9c9b9b;
+}
+
+::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #9c9b9b;
+}
+
+:-ms-input-placeholder {
+  color: #9c9b9b;
+}
+
+/* @media (max-width: 800px) {
+    .contact form div {
+     width: 80vw;
+    }
+  } */
 
 /* =============================================
    4. FOOTER

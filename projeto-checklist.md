@@ -4,15 +4,15 @@
 
 - [ ] Desenvolver o front-end dos arquivos PSD em anexo;
 - [ ] O resultado deve ser responsivo e a versão mobile deve condizer com o arquivo PSD mobile;
-- [x] O código deve estar semânticamente correto, bem organizado e estruturado.
+- [ ] O código deve estar semânticamente correto, bem organizado e estruturado.
 
 #### Observações:
 
-- [x] É permitido utilizar jQuery;
+- [ ] É permitido utilizar jQuery;
 - ~~Não é permitido utilizar framework e pré processadores CSS;~~
 - ~~Não é permitido utilizar framework JavaScript;~~
 - ~~Não é permitido utilizar Angular, Bootstrap, React, Vue, etc;~~
-- [x] O conteúdo final deve ser funcional na última e penúltima versão dos principais navegadores, e também com a versão 9 do navegador Internet Explorer.
+- [ ] O conteúdo final deve ser funcional na última e penúltima versão dos principais navegadores, e também com a versão 9 do navegador Internet Explorer.
 
 #### Funcionalidades:
 
@@ -27,7 +27,7 @@
 #### Diferencial:
 
 - [ ] Efeitos animados nos elementos interativos;
-- [x] Utilizar automatizador de tarefa (gulp).
+- [ ] Utilizar automatizador de tarefa (gulp).
 
 #### Envio:
 
