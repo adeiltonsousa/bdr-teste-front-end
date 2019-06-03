@@ -12,7 +12,7 @@ Ver [checklist](./projeto-checklist.md).
 1. Na pasta raiz instale as dependências com: `npm install` ou `yarn install`
 2. Start o projeto com o comando: `gulp`
 
-> O Projeto irá ser execultado em `localhost:3000`.
+> O Projeto irá ser executado em `localhost:3000`.
 
 ## Contribuindo
 
